@@ -6,7 +6,7 @@
 
 <b>İçerik:</b>
 <ul>
-		<li>Kütüphane plugin mantığın geliştirildi. Şuan için sadece TCMB provider entegrasyonu gerçekleştirildi.</li>
+		<li>Kütüphane plugin mantığında geliştirildi. TCMB provider entegrasyonu gerçekleştirildi.</li>
 		<li>Farklı  bir kur sağlayıcısı entegre edilip geliştirilebilir.</li>
 		<li>Genel provider mantığı arka planda çalışan threadler ile sağlandı. Kur bilgisi anlık çekilmiyor. Uygulama start olduğu an kur bilgisi ilgili providerdan alınır ardından belirli aralıklar ile güncelleme yapılır.</li>
 		<li>Bu süre parametrik yapılabilir veya buna provider kurallarına göre karar verilbilir.</li>
