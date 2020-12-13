@@ -14,8 +14,9 @@ namespace TcmbProviderTest
             TcmbExchangeApi api = new TcmbExchangeApi();
           var response=  await api.SearchAsync(new SearchRequest
             { 
-                OrderBy = OrderBy.Currency | OrderBy.ForexBuying,
-                OrderByType = OrderByType.Asc
+                OrderBy = OrderBy.CurrencyAsc | OrderBy.ForexBuyingDesc,
+                OrderByType = OrderByType.Asc,
+                Currencies=Currency.USD
             });
 
 

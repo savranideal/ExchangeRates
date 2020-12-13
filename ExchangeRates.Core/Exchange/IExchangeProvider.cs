@@ -21,8 +21,7 @@ namespace ExchangeRates
 
         /// <summary>
         /// Tüm kur bilgilerini döner.
-        /// </summary>
-        /// <param name="currency"></param>
+        /// </summary> 
         /// <returns></returns>
         IDictionary<Currency,TModel> GetExchangeRates();
 

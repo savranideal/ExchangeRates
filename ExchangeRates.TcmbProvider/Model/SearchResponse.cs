@@ -2,13 +2,8 @@
 
 namespace ExchangeRates.TcmbProvider
 {
-    public class SearchResponse
-    {
-
-        /// <summary>
-        /// Arama sonu oluşan kur listesi
-        /// </summary>
-        public IEnumerable<TcmbExchangeRate> Items { get; set; }
+    public class TcmbSearchResponse: SearchResponse<TcmbExchangeRate>
+    { 
 
         /// <summary>
         /// Sıralama yapılan  özellik bilgisi

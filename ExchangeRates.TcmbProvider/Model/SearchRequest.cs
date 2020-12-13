@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace ExchangeRates.TcmbProvider
 {
@@ -7,7 +8,7 @@ namespace ExchangeRates.TcmbProvider
         /// <summary>
         /// Para birimine göre filtreler
         /// </summary>
-        public Currency? Currency { get; set; }
+        public IEnumerable<Currency> Currencies { get; set; }
 
         /// <summary>
         /// Sıralama yapılacak özellik bilgisi
