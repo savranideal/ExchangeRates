@@ -1,94 +1,97 @@
-﻿namespace ExchangeRates
+﻿using System.Runtime.Serialization;
+
+namespace ExchangeRates
 {
     /// <summary>
     /// Para birimi.
     /// </summary> 
+    [DataContract]
     public enum Currency : ushort
     {
         /// <summary>
         /// Varsayılan değerdir. Kodda <c>default</c> ile de ifade edilebilir. String gösterimi <c>null</c>dır. 
         /// </summary> 
-        NULL = default,
+        [EnumMember] NULL = default,
         /// <summary>
         /// TL
         /// </summary>
-        TRY = 949,
+        [EnumMember] TRY = 949,
         /// <summary>
         ///ABD DOLARI
         /// </summary>
-        USD = 840,
+        [EnumMember] USD = 840,
         /// <summary>
         /// EURO
         /// </summary>
-        EUR = 978,
+        [EnumMember] EUR = 978,
         /// <summary>
         /// İNGİLİZ STERLİNİ
         /// </summary>
-        GBP = 826, 
+        [EnumMember] GBP = 826,
         /// <summary>
         /// AVUSTRALYA DOLARI
         /// </summary>
-        AUD = 36,
+        [EnumMember] AUD = 36,
         /// <summary>
         /// DANİMARKA KRONU
         /// </summary>
-        DKK = 208,
+        [EnumMember] DKK = 208,
         /// <summary>
         /// İSVİÇRE FRANGI
         /// </summary>
-        CHF = 756, 
+        [EnumMember] CHF = 756,
         /// <summary>
         /// İSVEÇ KRONU
         /// </summary>
-        SEK = 752,
+        [EnumMember] SEK = 752,
         /// <summary>
         /// KANADA DOLARI
         /// </summary>
-        CAD = 124,
+        [EnumMember] CAD = 124,
         /// <summary>
         /// KUVEYT DİNARI
         /// </summary>
-        KWD = 414,
+        [EnumMember] KWD = 414,
         /// <summary>
         /// NORVEÇ KRONU
         /// </summary>
-        NOK = 578,
+        [EnumMember] NOK = 578,
         /// <summary>
         /// SUUDİ ARABİSTAN RİYALİ
         /// </summary>
-        SAR = 682,
+        [EnumMember] SAR = 682,
         /// <summary>
         /// JAPON YENİ
         /// </summary>
-        JPY = 392,
+        [EnumMember] JPY = 392,
         /// <summary>
         ///BULGAR LEVASI
         /// </summary>
-        BGN = 975,
+        [EnumMember] BGN = 975,
         /// <summary>
         /// RUMEN LEYİ
         /// </summary>
-        RON = 946,
+        [EnumMember] RON = 946,
         /// <summary>
         /// RUS RUBLESİ
         /// </summary>
-        RUB = 643,
+        [EnumMember] RUB = 643,
         /// <summary>
         /// İRAN RİYALİ
         /// </summary>
-        IRR = 364,
+        [EnumMember] IRR = 364,
         /// <summary>
         /// ÇİN YUANI
         /// </summary>
-        CNY = 156,
+        [EnumMember] CNY = 156,
         /// <summary>
         /// PAKİSTAN RUPİSİ
         /// </summary>
-        PKR = 586,
+        [EnumMember] PKR = 586,
         /// <summary>
         /// KATAR RİYALİ
         /// </summary>
-        QAR = 634,
+        [EnumMember] QAR = 634,
     }
 
 

@@ -6,7 +6,6 @@ namespace ExchangeRates
     /// <summary>
     /// Kur bilgisi
     /// </summary>
-    [Serializable] 
     [DebuggerDisplay("{Currency} {Value}")]
     public class ExchangeRate
     { 

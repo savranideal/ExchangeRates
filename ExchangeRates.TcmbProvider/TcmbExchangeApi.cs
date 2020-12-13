@@ -99,7 +99,7 @@ namespace ExchangeRates.TcmbProvider
             }
             response.OrderBy = request.OrderBy;
             response.OrderByType = request.OrderByType;
-            response.Items = orderedQuery.AsEnumerable();
+            response.Items = orderedQuery.ToList();
             return Task.FromResult(response);
         }
 

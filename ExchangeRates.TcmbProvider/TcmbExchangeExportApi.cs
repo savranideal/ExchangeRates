@@ -1,4 +1,5 @@
 ﻿using ExchangeRates.Core.Export;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ExchangeRates.TcmbProvider
@@ -59,9 +60,9 @@ namespace ExchangeRates.TcmbProvider
             {
                 return new XmlExportResult { ErrorMessage="Search result is empty"};
             }
-            var exportManager = ExportFactory.CreateXmlExportManager();
-            var exportedData = await exportManager.ExportAsync(searchResult.Items);
-            return exportedData;
+            var exportManager = ExportFactory.CreateXmlExportManager(); 
+            var exportData=await exportManager.ExportAsync(searchResult.Items);
+            return exportData;
         }
 
     }

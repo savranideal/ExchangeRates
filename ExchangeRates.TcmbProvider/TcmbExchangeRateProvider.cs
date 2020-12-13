@@ -132,6 +132,11 @@ namespace ExchangeRates.TcmbProvider
                             {
                                 //todo: logla
                             }
+                            finally
+                            { 
+                                //// Log(serviceScope.Request)
+                                //// Log(serviceScope.Response) 
+                            }
                         }
                     }
                     catch (Exception e)

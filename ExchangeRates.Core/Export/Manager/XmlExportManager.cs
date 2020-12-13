@@ -6,7 +6,7 @@ namespace ExchangeRates.Core.Export
     public class XmlExportManager : ExportManager
     {
 
-        public Task<XmlExportResult> ExportAsync<TInput>(TInput input) where TInput : class 
+        public Task<XmlExportResult> ExportAsync<TInput>(TInput input)  
         {
 
             var t = new XmlExportResult();

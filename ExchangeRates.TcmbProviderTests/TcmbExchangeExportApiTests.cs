@@ -11,10 +11,7 @@ namespace ExchangeRates.TcmbProvider.Tests
     [TestClass()]
     [TestFixture()]
     public class TcmbExchangeExportApiTests
-    {
-
-
-
+    { 
         [Test()]
         public async Task Export_Json()
         {
@@ -57,10 +54,7 @@ namespace ExchangeRates.TcmbProvider.Tests
         {
             TcmbExchangeApi api = new TcmbExchangeApi();
             var exportApi = new TcmbExchangeExportApi(api);
-            var response = await exportApi.ToXmlAsync(new SearchRequest
-            {
-            });
-
+            var response = await exportApi.ToXmlAsync(new SearchRequest {  }); 
             Assert.IsNotNull(response);
             Assert.That(response.FileType == Core.Export.ExportFileType.Xml);
             Assert.IsNotEmpty(response.Data);
@@ -82,7 +76,7 @@ namespace ExchangeRates.TcmbProvider.Tests
             Assert.IsNotNull(response);
             Assert.That(response.FileType == Core.Export.ExportFileType.Xml);
             Assert.IsNotEmpty(response.Data);
-            var jsonData = Xml.Deserialize<IEnumerable<TcmbExchangeRate>>(response.Data);
+            var jsonData = Xml.Deserialize<List<TcmbExchangeRate>>(response.Data);
             Assert.IsNotNull(jsonData);
             Assert.IsNotNull(jsonData.All(c => currencies.Contains(c.Currency)));
         }

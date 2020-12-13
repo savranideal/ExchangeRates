@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace ExchangeRates 
 {
@@ -8,8 +9,8 @@ namespace ExchangeRates
 
         /// <summary>
         /// Arama sonucu oluşan sonuç listesi
-        /// </summary>
-        public IEnumerable<TModel> Items { get; set; }
+        /// </summary> 
+        public List<TModel> Items { get; set; }
          
     }
 }
