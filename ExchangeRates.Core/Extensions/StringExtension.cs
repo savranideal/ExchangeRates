@@ -14,7 +14,7 @@ namespace ExchangeRates
         /// <returns></returns>
         public static decimal ToDecimal(this string value)
         {
-            if (decimal.TryParse(value, out decimal decimalValue))
+              if (decimal.TryParse(value.AsSpan(),System.Globalization.NumberStyles.Currency, System.Globalization.CultureInfo.CurrentCulture, out decimal decimalValue))
                 return decimalValue;
 
             return default;
