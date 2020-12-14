@@ -8,8 +8,15 @@ namespace ExchangeRates.TcmbProvider
 {
     public class TcmbExchangeApi : ISearchable<SearchRequest, TcmbSearchResponse, TcmbExchangeRate>
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public Task<TcmbSearchResponse> SearchAsync(SearchRequest request)
         {
+            /// Bu metotda aslında bir I/O işlemi yok. Async olmasına gerek yok. Olmasında bir sakınca yok oluşabilecek farklı bağımlılıklar için Async yapıldı.
             var tcmbExchangeRateProvider = new TcmbExchangeRateProvider();
             tcmbExchangeRateProvider.Initialize(true);
             var response = new TcmbSearchResponse();
