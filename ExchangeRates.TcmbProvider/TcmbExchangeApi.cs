@@ -10,6 +10,7 @@ namespace ExchangeRates.TcmbProvider
     {
         public Task<TcmbSearchResponse> SearchAsync(SearchRequest request)
         {
+        /// Bu metotunAsync olmasına gerek yok. Olmasında bir sakınca yok oluşabilecek farklı bağımlılıklar için Async yapıldı.
             var tcmbExchangeRateProvider = new TcmbExchangeRateProvider();
             tcmbExchangeRateProvider.Initialize(true);
             var response = new TcmbSearchResponse();
